@@ -17,7 +17,7 @@ handlers:
     logfile:
         class: logging.FileHandler
         formatter: error
-        filename: D:\\[University]\\[M.Sc.]\\[Thesis]\\[Experiments]\\[Code]\\[Python]\\[Crawler]\\applogs.log
+        filename: ./applogs.log
         mode: w
 loggers:
     __main__:

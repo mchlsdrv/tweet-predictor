@@ -174,17 +174,19 @@ class TwitterCrawler:
 
         # 3.7) If there are any UIDs left
         if uncrawled_uids.size:
-            n_crawled = crawled_uids.size
             for idx, uid in enumerate(uncrawled_uids):
-                progress = np.round(100 * (idx + n_crawled) / uncrawled_uids.size, 1)
                 # CALCULATE ETA
-                time_outs_left = np.round(int((len(uncrawled_uids) - idx) / 15)) - 1
-                if time_outs_left < 0:
-                    time_outs_left = 0
 
                 if isinstance(logger, logging.Logger):
                     with lock:
-                        logger.info(f'STATUS (thread id: {threading.get_ident()}): {idx + n_crawled}/{uids.size} ({progress}%), ETA < {time_outs_left} time outs left ({time_outs_left * 15} minutes)')
+                        time_outs_left = int((uncrawled_uids.size - idx) / 15) - 1
+                        if time_outs_left < 0:
+                            time_outs_left = 0
+                        logger.info(f'''
+STATUS (thread id: {threading.get_ident()}):
+    - Progress: {idx}/{uncrawled_uids.size} ({np.round(100 * idx / uncrawled_uids.size, 1)}%)
+    - ETA: {time_outs_left} time outs left ({time_outs_left * 15} minutes)
+''')
 
                 if self.check_user(uid=uid):
                     # if we got here - the user exists and it's not protected, so we can try to get the follower/friend lists

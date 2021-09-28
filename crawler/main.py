@@ -92,17 +92,6 @@ if __name__ == '__main__':
         thread.join()
         logging.info(f'{__name__}: after joining thread {idx}')
 
-    # with concurrent.futures.ThreadPoolExecutor(max_workers=n_workers) as executor:
-    #     executor.map(
-    #         crwl_sub_net,
-    #         list(zip(
-    #             np.array_split(uncrawled_uids, n_workers),
-    #             np.array(list(app_credentials.values()))[:n_workers],
-    #             [crawled_df_file_path]*n_workers,
-    #             [lock]*n_workers,
-    #             [logger]*n_workers
-    #         ))
-    #     )
     if isinstance(logger, logging.Logger):
         logger.info(f'''
 IN: {__name__}

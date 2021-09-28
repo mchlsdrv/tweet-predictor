@@ -5,6 +5,7 @@ import threading
 import pathlib
 from pathlib import Path
 import numpy as np
+import pandas as pd
 from classes import TwitterCrawler
 
 
@@ -141,6 +142,9 @@ Thread with ID {threading.get_ident()} Started:
 
     # 3) Update the crawled database
     with lock:
-        crawled_df = pd.read_pickle(save_file_path)
-        crawled_df = crawled_df.append(new_crawled_df, ignore_index=True)
-        crawled_df.to_pickle(save_file_path, protocol=4)
+        if save_file_path.is_file():
+            crawled_df = pd.read_pickle(save_file_path)
+            crawled_df = crawled_df.append(new_crawled_df, ignore_index=True)
+            crawled_df.to_pickle(save_file_path, protocol=4)
+        else:
+            new_crawled_df.to_pickle(save_file_path, protocol=4)
