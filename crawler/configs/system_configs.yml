@@ -1,0 +1,69 @@
+version: 1
+general:
+    network_name: unfiltered
+    input_dir: './input'
+    output_dir: './output'
+    logger_configs_file: './configs/logger_configs.yml'
+data_kernel:
+    # Time Window Configs
+    days: 0
+    hours: 12
+    minutes: 0
+    # Filtering Configs
+    n: 10000
+    act_prop: 3.6
+    pop_prop: 7.2
+crawler:
+    timeout: 15
+    uids_file: './uids/U.npy'
+app_credentials:
+    app_1:
+        consumer_key: HONJd5HL8yxE4W882u0ksrrmx
+        consumer_key_secret: afjYCOxGwSLFqSn0mRddDQFQkVhBxL21xOfPg2DuqECm2Y2PFS
+        access_token: 1413781861390864386-4eIvgbXcm2Rre8hpNb6bh5Gm8waoNe
+        access_token_secret: jJKWHXXGWYM7wQDQSDBQVAgaDuo5j9T603f7HbEW7jKsG
+    app_2:
+        consumer_key: tYAgfNPo1uPhJuPBbGfUt7ZhR
+        consumer_key_secret: gqB6TPJ1mRmkjtPOn0RVbIXYpNwKKKhbrdt1kGOF81H23RNtWT
+        access_token: 1413781861390864386-ZNq4qBTID0GkWjA8BwAjylpIySpIkY
+        access_token_secret: Aef0DWkRoRG9fFuEzmnFwDvD4iYs8paAQpriOkEsYamct
+    app_3:
+        consumer_key: huz8xAEti0btfxTpFVawhIzED
+        consumer_key_secret: 8HTo61wKKS0iovfuGezANAvxQ7TSpyLcULmX8gbPvowjrRrTeH
+        access_token: 1413781861390864386-XSHKSRcCldGBEei3QRfrPjvJU0jc1c
+        access_token_secret: WxNx7ASLkUwXZyOBa0ebw1UHNVN2olCN83cpfoc52NVkg
+    app_4:
+        consumer_key: s51420ZK1U1Fslc3hkGJQMken
+        consumer_key_secret: wUkmJBelLek9yg5Vic8cMyIfhHM5EPLoemUPTf87x4JJpb2lmS
+        access_token: 1413781861390864386-cXF1VYOjTm9uaV4fevLUFY3LxVnm5w
+        access_token_secret: wi4II0Be1b4mTg135StlynAvChNYrN5KBQk26k2OKWKmx
+    app_5:
+        consumer_key: WFCZp2SGD6hVv7BKBmD8xVqa7
+        consumer_key_secret: aFn231DZ27Gs6GEldSguxw920KP6cG6l1YfGNS5qxvZTSqhoYh
+        access_token: 1413781861390864386-Zy8YhxAGEqci8PzOSSXWd9TykIshmE
+        access_token_secret: 7e0K8gHL7ohvNmJmI1Rwe6ExoAU1E2K15BHZ1gOKlTZNW
+    app_6:
+        consumer_key: tlXZcLiDicspmoXXphL2uniPi
+        consumer_key_secret: 7ulTT6FnAmdjFzBe9PsUk1v1PGiAzARoSgNf5ug4dHKjynyPw1
+        access_token: 1413781861390864386-VBf9ZJCeOVfOiaYL7sIs1VNB2DZ6BJ
+        access_token_secret: DixgehIPKAYwYdqwbXJHDm2a9HyOWCbUvDdBvHNjlGShs
+    app_7:
+        consumer_key: a7T3jULTu7EJuwO7UW7aaWNNk
+        consumer_key_secret: bJ1JOU1G8lcRTA9eE4LmpMCkxuEWoez2h5IqF73A51b5yAcXat
+        access_token: 1413781861390864386-qcPdCCPv3aBFFEh7vosfKTmdhbH3LT
+        access_token_secret: uaK9ChJsmpuhYepKUEjdsimH8o5tMgHpRRBFIihsfDJ4i
+    app_8:
+        consumer_key: FTr7kZ5ByO2xpzG9156TOajs0
+        consumer_key_secret: dT7xPUvwAKXtYTXl0warnDOCgSfwlzDJoi2Rgn3WErsU2xH7El
+        access_token: 1413781861390864386-RJbRBXSzdVZdE63FWhuU6Cc9VWPGP8
+        access_token_secret: FtvnjwkDc6bjY2jGsZu14cRgSq4rUjS33KEC3m1XfyVJd
+    app_9:
+        consumer_key: FcHmkBKO0V7BauzL3A4uS4ZyI
+        consumer_key_secret: Rlg24vgSizlnjyly6Mhmzbc3iHL3vANAtyxHmOr9tIaRTwSxZk
+        access_token: 1413781861390864386-vgLZxHgKwZQ0gVt6iXOdFvl3k3ZDg0
+        access_token_secret: rqMHk5zKZfSdQvJMuqtqXLZdNUNE82zPWLwJxkdoNlNMJ
+    app_10:
+        consumer_key: BdsH88QABiuybLuuGX3nQEivq
+        consumer_key_secret: JwPL8Up2sectLnMz97ghLATPgozu2JTdnkkBlSUOEqSwbBwKPD
+        access_token: 1413781861390864386-BBIGTmPlyo71GRpMhZTO01bhDnkL7b
+        access_token_secret: k7rMucgguFDvUvShLgfJcqhQA5LDDrZ24szTmU4hnCWlG
